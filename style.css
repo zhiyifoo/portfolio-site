@@ -197,13 +197,17 @@ h1.name {
   font-weight: 200;
   font-size: clamp(44px, 7.4vw, 104px);
   line-height: 0.95;
-  letter-spacing: -8.32px;
+  letter-spacing: -0.08em;
   color: var(--color-muted);
   margin-top: 4px;
   max-width: 740px;
 }
 
 .role-title em, .role-title i { font-style: italic; }
+
+@media (max-width: 640px) {
+  .role-title .role-title-break { display: block; }
+}
 
 .hero-row { margin-top: 110px; }
 
