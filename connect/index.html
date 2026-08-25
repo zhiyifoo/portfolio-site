@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connect — Foo's Portfolio</title>
+<meta name="description" content="Get in touch with Zhiyi Foo.">
+<link rel="canonical" href="https://www.zhiyifoo.com/connect/">
+<link rel="icon" href="/favicon.jpg" type="image/jpeg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Connect — Foo's Portfolio">
+<meta property="og:description" content="Get in touch with Zhiyi Foo.">
+<meta property="og:url" content="https://www.zhiyifoo.com/connect/">
+<meta property="og:image" content="https://www.zhiyifoo.com/assets/images/social-preview.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Connect — Foo's Portfolio">
+<meta name="twitter:description" content="Get in touch with Zhiyi Foo.">
+<meta name="twitter:image" content="https://www.zhiyifoo.com/assets/images/social-preview.jpg">
+
+<link rel="preload" href="/assets/fonts/inter-300.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/source-serif-4-200.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+<header class="site-header">
+  <nav class="site-nav" aria-label="Primary">
+      <a href="/">Home</a>
+      <a href="/about/">About me</a>
+      <a href="/projects/">Projects</a>
+      <a href="/connect/" aria-current="page">Connect</a>
+  </nav>
+</header>
+<main>
+<h1 class="name">Connect.</h1>
+
+<div class="social-row">
+  <a href="https://www.linkedin.com/in/zhiyifoo/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+  <a href="https://github.com/zhiyifoo" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.19c0 4.49 2.87 8.3 6.84 9.64.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.19C22 6.58 17.52 2 12 2z"/></svg></a>
+</div>
+
+<div class="plus-row" style="margin-top:56px"><span>+</span><span>+</span></div>
+
+<form class="contact-form" id="contact-form">
+  <div class="field-name"><input type="text" name="name" placeholder="Name" required></div>
+  <div class="field-email"><input type="email" name="email" placeholder="Email" required></div>
+  <div class="field-message"><textarea name="message" placeholder="Message" required></textarea></div>
+  <div class="field-submit"><button type="submit">Send</button></div>
+</form>
+<script>
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var f = e.target;
+  var subject = encodeURIComponent('Portfolio contact from ' + f.name.value);
+  var body = encodeURIComponent(f.message.value + '\n\n— ' + f.name.value + ' (' + f.email.value + ')');
+  window.location.href = 'mailto:foozhiyi@gmail.com?subject=' + subject + '&body=' + body;
+});
+</script>
+
+</main>
+<footer class="site-footer">
+  <a href="mailto:foozhiyi@gmail.com"><strong>FOOZHIYI</strong>@GMAIL.COM</a>
+  <a class="location" href="https://www.google.com/maps/place/San+Francisco+Bay+Area,+CA/@37.8778835,-123.0797015,9z/data=!3m1!4b1!4m6!3m5!1s0x808583a3a688d7b5:0x8c891b8457461fa9!8m2!3d37.8271784!4d-122.2913078!16zL20vMDZwdnI?entry=ttu" target="_blank" rel="noopener">37&deg;21'48.8"N <strong>121&deg;55'42.4"W</strong></a>
+</footer>
+</body>
+</html>
