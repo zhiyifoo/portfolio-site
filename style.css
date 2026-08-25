@@ -258,7 +258,7 @@ h1.section-title, .split > h1 {
   display: block;
   font-family: var(--font-body);
   font-weight: 300;
-  font-size: clamp(20px, 5vw, 36px);
+  font-size: clamp(26px, 6vw, 36px);
   color: var(--color-ink);
 }
 
