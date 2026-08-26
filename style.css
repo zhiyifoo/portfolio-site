@@ -187,8 +187,8 @@ h1.name {
   font-family: var(--font-body);
   font-weight: 300;
   font-size: clamp(40px, 6.4vw, 90px);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
   color: var(--color-ink);
 }
 
@@ -220,6 +220,7 @@ h1.name {
 .lede {
   font-size: 18px;
   font-weight: 300;
+  line-height: 1.2;
   color: var(--color-muted);
 }
 
@@ -242,7 +243,8 @@ h1.section-title, .split > h1 {
   font-weight: 300;
   font-size: clamp(32px, 4.4vw, 60px);
   color: var(--color-ink);
-  line-height: 1.1;
+  line-height: 0.97;
+  letter-spacing: -0.035em;
 }
 
 /* Experience list */
@@ -259,6 +261,8 @@ h1.section-title, .split > h1 {
   font-family: var(--font-body);
   font-weight: 300;
   font-size: clamp(26px, 6vw, 36px);
+  line-height: 1.2;
+  letter-spacing: -0.035em;
   color: var(--color-ink);
 }
 
@@ -266,6 +270,7 @@ h1.section-title, .split > h1 {
   display: block;
   font-size: 16px;
   font-weight: 300;
+  line-height: 1.2;
   color: var(--color-muted);
   margin-top: 4px;
 }
@@ -275,6 +280,8 @@ h1.section-title, .split > h1 {
   font-weight: 300;
   font-style: italic;
   font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
   color: var(--color-ink);
   margin-top: 22px;
   padding-left: 32px;
@@ -283,6 +290,7 @@ h1.section-title, .split > h1 {
 .experience-item .desc {
   font-size: 18px;
   font-weight: 300;
+  line-height: 1.2;
   color: var(--color-muted);
   margin-top: 8px;
   max-width: 60ch;
@@ -345,8 +353,8 @@ h1.section-title, .split > h1 {
   text-align: center;
 }
 
-.home-project-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-.home-project-grid .project-card img { aspect-ratio: 4 / 3; border-radius: 0; margin-bottom: 0; }
+.home-project-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 40px; }
+.home-project-grid .project-card img { aspect-ratio: 1.582; border-radius: 0; margin-bottom: 0; }
 
 .resume-download { text-align: center; margin-top: 56px; }
 .resume-download .btn { margin-top: 0; }
