@@ -177,16 +177,16 @@ main { padding-top: 60px; padding-bottom: 0; }
 
 .about-photo {
   width: 100%;
-  max-width: 280px;
-  aspect-ratio: 4 / 5;
+  max-width: 300px;
+  aspect-ratio: 300 / 330;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 0;
 }
 
 h1.name {
   font-family: var(--font-body);
   font-weight: 300;
-  font-size: clamp(40px, 6.4vw, 90px);
+  font-size: clamp(58px, calc(19.11px + 5.063vw), 90px);
   line-height: 1.05;
   letter-spacing: -0.02em;
   color: var(--color-ink);
@@ -195,12 +195,24 @@ h1.name {
 .role-title {
   font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
   font-weight: 200;
-  font-size: clamp(44px, 7.4vw, 104px);
+  font-size: clamp(67px, calc(22.04px + 5.854vw), 104px);
   line-height: 0.95;
   letter-spacing: -0.08em;
   color: var(--color-muted);
   margin-top: 4px;
   max-width: 740px;
+}
+
+/* About page photo + bio split: reference switches to a fixed 300px photo
+   column much earlier than the generic .split breakpoint, so this gets its
+   own scoped column widths/gap/breakpoint rather than touching .split. */
+.split.about-split {
+  grid-template-columns: 300px 1fr;
+  gap: 56px;
+}
+
+@media (max-width: 430px) {
+  .split.about-split { grid-template-columns: 1fr; gap: 20px; }
 }
 
 .role-title em, .role-title i { font-style: italic; }
@@ -221,6 +233,15 @@ h1.name {
   font-size: 18px;
   font-weight: 300;
   color: var(--color-muted);
+}
+
+/* About page bio copy: reference scales this text (12px -> 18px across
+   breakpoints) independently of the generic .lede used elsewhere on the
+   site, so it gets its own scoped sizing rather than changing .lede globally. */
+.about-lede {
+  font-size: clamp(12px, calc(3.76px + 1.017vw), 18px);
+  line-height: 1.2;
+  margin-bottom: 1.2em;
 }
 
 .split .lede { max-width: 60ch; }
